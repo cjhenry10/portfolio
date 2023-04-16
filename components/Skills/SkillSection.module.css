@@ -1,0 +1,40 @@
+.skills h1 {
+  /* text-align: center; */
+  overflow-x: hidden;
+  position: absolute;
+  font-size: clamp(2rem, 4vw, 3rem);
+  transition: all 0.75s ease-out;
+  /* transition-timing-function: steps(4, jump-start); */
+  /* padding-top: 1rem; */
+  margin-top: 1rem;
+  font-family: 'Noto Serif', serif;
+} 
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 1320px; */
+  margin-inline: 15vw;
+  padding-top: 10vh;
+  /* height: 100vh; */
+  /* background-color: gray; */
+}
+
+@media (max-width: 1024px) {
+  .container {
+    margin-inline: 10vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills h1 {
+    transition: none;
+  }
+
+  .container {
+    margin-inline: 5vw;
+  }
+}

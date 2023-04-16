@@ -1,0 +1,13 @@
+.projects h1 {
+  text-align: right;
+  overflow-x: hidden;
+  position: relative;
+  padding-right: 10vw;
+  font-size: clamp(2rem, 4vw, 3rem);
+  transition: all 0.75s ease-out;
+  /* transition-timing-function: steps(4, jump-start); */
+  margin-top: 1rem;
+  font-family: 'Noto Serif', serif;
+  width: 95%;
+  /* display: inline-block; */
+}

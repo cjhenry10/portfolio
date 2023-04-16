@@ -1,0 +1,22 @@
+.hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1s;
+  overflow-x: hidden;
+}
+
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+  .show {
+    transition: none;
+  }
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1s;
+  display: flex;
+}
