@@ -6,15 +6,22 @@ import styles from './Landing.module.css';
 import { vh } from '../../utils/viewport';
 import openInNewTab from '../../utils/newTab';
 import Background from './Background';
+import {BsGithub, BsLinkedin} from 'react-icons/bs';
 
 const Landing = () => {
-  const [top, setTop] = useState(window.innerHeight/2);
-  const [left, setLeft] = useState(window.innerWidth/2);
+  const [top, setTop] = useState(0);
+  const [left, setLeft] = useState(0);
   const [font, setFont] = useState(`clamp(2rem, 8vw, 8rem)`);
   const [opacity, setOpacity] = useState(1);
   const [opacity1, setOpacity1] = useState(0);
   const [z, setZ] = useState(0);
   // const [color, setColor] = useState(`var(--dark3)`);
+  useEffect(()=>{
+    if (typeof window !== 'undefined') {
+      setTop(window.innerHeight/2)
+      setLeft(window.innerWidth/2)
+    }
+  },[])
 
   const handleScroll = React.useCallback(() => {
     if (window.scrollY > 50) {
@@ -50,12 +57,12 @@ const Landing = () => {
         <h1 style={{ zIndex: z, fontSize: font, position: 'fixed', top: `${top}px`, left: `${left}px`, opacity: opacity1}}>Connor Henry</h1>
         {/* </FadeIn> */}
         <SlideIn delay={'1s'} pos='fixed'>
-        <h3 style={{opacity: opacity, transition: 'opacity 0.25s linear'}}>Full-stack Developer</h3>
+        <h3 style={{opacity: opacity, transition: 'opacity 0.25s linear'}}>Under Construction!</h3>
         </SlideIn>
         {/* <FadeIn> */}
         <div className={styles.buttons}>
-        <button onClick={() => openInNewTab('https://github.com/cjhenry10')}><i className="fa-brands fa-github"></i></button>
-        <button onClick={() => openInNewTab('https://www.linkedin.com/in/connor-henry-b071a6211/')}><i className="fa-brands fa-linkedin"></i></button>
+        <a href='https://github.com/cjhenry10' target='_blank' rel='noopener noreferrer'><BsGithub /></a>
+        <a href='https://www.linkedin.com/in/connor-henry-b071a6211/' target='_blank' rel='noopener noreferrer'><BsLinkedin /></a>
         </div>
         {/* </FadeIn> */}
       </div>

@@ -47,9 +47,10 @@
   margin: 0 auto;
   margin-top: 50vh;
   z-index: 1;
+  animation: fadeIn 4s ease;
 }
 
-.buttons button {
+.buttons a {
   background: transparent;
   border: none;
   /* width: 5vw;
@@ -58,4 +59,13 @@
   color: var(--light3);
   font-size: 5vh;
   margin: 0 5vmin;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
