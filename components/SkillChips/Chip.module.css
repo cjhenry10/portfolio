@@ -1,0 +1,65 @@
+.chip {
+  position: relative;
+    overflow: hidden;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4rem;
+    min-width: 4rem;
+    font-size: 0.75rem;
+}
+
+.html {
+  /* #e34c26 */
+  background-color: #e34c26;
+  color: #fff;
+  /* color: hsl(36, 100%, 86%);
+  background-color: hsl(37, 56%, 6%); */
+}
+
+.css {
+  /* #264de4 */
+  background-color: #264de4;
+  color: #fff;
+}
+
+.js {
+  /* #f0db4f */
+  background-color: #f0db4f;
+  color: #323330;
+}
+
+.ts {
+  /* #007acc */
+  background-color: #007acc;
+  color: #fff;
+}
+
+.sql {
+  background-color: #b71c1c;
+  color: #cfd8dc;
+}
+
+.node {
+  background-color: #4caf50;
+  color: hsl(200, 18%, 15%);
+}
+
+.mongo {
+  background-color: #4caf50;
+  color: #eee;
+}
+
+.python {
+  /* #0277BD; #FFC107 */
+  background-color: #0277bd;
+  color: #fff;
+}
+
+.react {
+  background-color: #80deea;
+  color:hsl(200, 18%, 15%);
+}

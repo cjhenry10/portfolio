@@ -5,7 +5,7 @@ import styles from './Nav.module.css';
 const Nav = () => {
   const [color, setColor] = useState(`var(--dark3)`);
   const [navLinks, setNavLinks] = useState(`${styles['navbar-links']}`);
-  const navRef = useRef();
+  const navRef = useRef<HTMLElement | null>(null);
 
   let timer;
   const handleClick = () => {
@@ -27,9 +27,9 @@ const Nav = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > window.innerHeight - (window.innerHeight/2)) {
-        setColor(`var(--dark2)`);
+        setColor(`var(--c1)`);
       } else {
-        setColor(`var(--dark3)`);
+        setColor(`var(--c0)`);
       }
     };
     window.onscroll = handleScroll;
@@ -37,8 +37,10 @@ const Nav = () => {
   }, []);
 
   useEffect(() => {
-    const handleClickOutside = (e) => {
+    const handleClickOutside = (e: any) => {
       if (
+        typeof navRef.current !== 'undefined' &&
+        navRef.current !== null &&
         !navRef.current.contains(e.target) &&
         navLinks !== `${styles['navbar-links']}`
       ) {

@@ -1,9 +1,14 @@
 'use client'
-import React, { useEffect, useState } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import styles from './SlideUp.module.css';
 
-const SlideUp = (props) => {
+interface propTypes {
+  children: ReactNode;
+  delay: string;
+}
+
+const SlideUp = (props: propTypes) => {
   const [classes, setClasses] = useState(`${styles.hidden}`);
   const { ref, inView, entry } = useInView({
     /* Optional options */

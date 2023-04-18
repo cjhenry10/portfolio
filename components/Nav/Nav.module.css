@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: center;
   /* background-color: var(--dark2); */
-  color: var(--light3);
+  color: var(--c6);
   padding: 0 clamp(1rem, 10vw, 40rem);
   height: clamp(2.5vh, 3rem, 6vh);
   position: fixed;
@@ -40,14 +40,14 @@
 
 .navbar-links li a {
   text-decoration: none;
-  color: var(--light3);
+  color: var(--c6);
   padding: 0.75rem;
   display: block;
   font-size: clamp(1rem, 1vw, 1in);
 }
 
 .navbar-links li:hover {
-  background-color: var(--dark1);
+  background-color: var(--c4);
 }
 
 .toggle-button {
@@ -68,7 +68,7 @@
 .toggle-button .bar {
   height: 3px;
   width: 100%;
-  background-color: var(--light3);
+  background-color: var(--c6);
   border-radius: 10px;
 }
 
@@ -174,7 +174,7 @@
   }
 
   .navbar-links.active ul {
-      background-color: var(--dark3);
+      background-color: var(--c4);
       animation: growDown 300ms ease-in-out forwards;
       transform-origin: top center;
   }
@@ -183,7 +183,6 @@
       transform-origin: top center;
   }
   .navbar-links.active ul li {
-      /* background-color: #14151a; */
       animation: growDown 200ms ease-in-out forwards;
       transform-origin: top center;
   }

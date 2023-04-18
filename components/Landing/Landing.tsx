@@ -4,7 +4,6 @@ import FadeIn from '../Transitions/FadeIn';
 import SlideIn from '../Transitions/SlideIn';
 import styles from './Landing.module.css';
 import { vh } from '../../utils/viewport';
-import openInNewTab from '../../utils/newTab';
 import Background from './Background';
 import {BsGithub, BsLinkedin} from 'react-icons/bs';
 

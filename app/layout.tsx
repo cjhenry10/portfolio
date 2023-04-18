@@ -1,4 +1,5 @@
 import './globals.css'
+import Nav from '@/components/Nav/Nav'
 
 export const metadata = {
   title: 'Connor Henry',
@@ -12,7 +13,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        </body>
     </html>
   )
 }

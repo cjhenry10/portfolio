@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Cube.module.css';
 
 const Cube = () => {

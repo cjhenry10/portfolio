@@ -106,12 +106,21 @@ a {
   }
 } */
 :root {
-  --dark1: #242f40;
-  --dark2: #161d27;
-  --dark3: #090c10;
+  --dark1: hsl(216, 28%, 20%);
+  --dark2: hsl(215, 28%, 12%);
+  --dark3: hsl(214, 28%, 5%);
   --light1: #b4b8c5;
   --light2: #e5e5e5;
   --light3: #f7f7ff;
+  --hue: 220;
+  --sat: 25%;
+  --c0: hsl(var(--hue), var(--sat), 5%);
+  --c1: hsl(var(--hue), var(--sat), 9%);
+  --c2: hsl(var(--hue), var(--sat), 15%);
+  --c3: hsl(var(--hue), var(--sat), 20%);
+  --c4: hsl(var(--hue), var(--sat), 25%);
+  --c5: hsl(var(--hue), var(--sat), 45%);
+  --c6: hsl(var(--hue), 0%, 94%);
 }
 @import url("https://use.typekit.net/xne5lbb.css");
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
@@ -122,6 +131,7 @@ html {
 
 * {
   /* overflow-x: hidden !important; */
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
@@ -147,7 +157,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
-  background-color: var(--light3);
+  background-color: var(--c0);
+  color: var(--c6);
 }
 
 code {
