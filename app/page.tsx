@@ -13,7 +13,7 @@ export default function Home() {
     <>
     <Nav />
     <Landing />
-    <SkillSection />
+    {/* <SkillSection /> */}
     <ProjectSection />
     </>
   )

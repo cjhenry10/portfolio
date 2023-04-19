@@ -1,24 +1,26 @@
 .h1 {
-  text-align: right;
   overflow-x: hidden;
-  position: relative;
-  padding-right: 10vw;
+  position: absolute;
   font-size: clamp(2rem, 4vw, 3rem);
   transition: all 0.75s ease-out;
   /* transition-timing-function: steps(4, jump-start); */
+  /* padding-top: 1rem; */
   margin-top: 1rem;
   font-family: 'Noto Serif', serif;
-  width: 95%;
-  /* display: inline-block; */
+}
+
+.projects {
+  min-height: 100vh;
 }
 
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /* grid-template-rows: repeat(4, 1fr); */
-  gap: 1rem;
+  gap: 2rem;
   margin: 0.5rem auto;
   max-width: min(85vw, 1400px);
+  /* min-height: 100vh; */
 }
 
 @media screen and (max-width: 1200px) {

@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import styles from './Nav.module.css';
 
 const Nav = () => {
-  const [color, setColor] = useState(`var(--dark3)`);
+  const [color, setColor] = useState(`transparent`);
   const [navLinks, setNavLinks] = useState(`${styles['navbar-links']}`);
   const navRef = useRef<HTMLElement | null>(null);
 
@@ -24,17 +24,17 @@ const Nav = () => {
     }
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > window.innerHeight - (window.innerHeight/2)) {
-        setColor(`var(--c1)`);
-      } else {
-        setColor(`var(--c0)`);
-      }
-    };
-    window.onscroll = handleScroll;
-    return window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > window.innerHeight - (window.innerHeight/2)) {
+  //       setColor(`transparent`);
+  //     } else {
+  //       setColor(`transparent`);
+  //     }
+  //   };
+  //   window.onscroll = handleScroll;
+  //   return window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
   useEffect(() => {
     const handleClickOutside = (e: any) => {
@@ -77,17 +77,14 @@ const Nav = () => {
             </a>
           </li>
           <li className={styles['nav-item']}>
-            <a onClick={handleClick} href='#skills'>
-              Skills
-            </a>
-          </li>
-          <li className={styles['nav-item']}>
             <a onClick={handleClick} href='#projects'>
               Projects
             </a>
           </li>
           <li className={styles['nav-item']}>
-            <a href='#'>Contact</a>
+            <a onClick={handleClick} href='#'>
+              About
+            </a>
           </li>
         </ul>
       </div>

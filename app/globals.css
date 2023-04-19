@@ -127,11 +127,13 @@ a {
 
 html {
   scroll-behavior: smooth;
+  /* scroll-padding-top: 20rem; */
 }
 
 * {
   /* overflow-x: hidden !important; */
   box-sizing: border-box;
+  line-height: 1em + 1ex;
 }
 
 @media (max-width: 768px) {
