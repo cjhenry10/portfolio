@@ -121,6 +121,8 @@ a {
   --c4: hsl(var(--hue), var(--sat), 25%);
   --c5: hsl(var(--hue), var(--sat), 45%);
   --c6: hsl(var(--hue), 0%, 94%);
+  --c7: hsl(var(--hue), 0%, 75%);
+  --c8: hsl(var(--hue), 0%, 65%);
 }
 @import url("https://use.typekit.net/xne5lbb.css");
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');

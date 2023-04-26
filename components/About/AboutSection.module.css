@@ -1,0 +1,57 @@
+.h1 {
+  overflow-x: hidden;
+  /* position: absolute; */
+  font-size: clamp(2rem, 4vw, 3rem);
+  transition: all 0.75s ease-out;
+  /* transition-timing-function: steps(4, jump-start); */
+  /* padding-top: 1rem; */
+  margin-top: 1rem;
+  font-family: 'Noto Serif', serif;
+  text-align: right;
+  margin-right: 4rem;
+}
+
+.about {
+  min-height: 100vh;
+  position: relative;
+}
+
+.bio {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 1.125rem;
+  line-height: 2rem;
+}
+
+.bio > * {
+  width: calc(50% - 1rem);
+}
+
+.bio img {
+  object-fit: cover;
+  max-height: 35vh;
+}
+
+
+.container {
+  margin: 0.5rem auto;
+  max-width: min(85vw, 1400px);
+}
+
+.container > p {
+  margin: 0 4rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+  grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+  max-width: 75vw;
+  }
+}

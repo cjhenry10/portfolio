@@ -5,6 +5,7 @@ import Landing from '@/components/Landing/Landing';
 import Nav from '@/components/Nav/Nav';
 import ProjectSection from '@/components/Projects/ProjectSection';
 import SkillSection from '@/components/Skills/SkillSection';
+import AboutSection from '@/components/About/AboutSection';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,6 +16,7 @@ export default function Home() {
     <Landing />
     {/* <SkillSection /> */}
     <ProjectSection />
+    <AboutSection />
     </>
   )
 }

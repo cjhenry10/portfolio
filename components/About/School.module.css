@@ -1,0 +1,140 @@
+.school {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.school > * {
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 0.25rem;
+  padding: 1rem;
+  width: calc(50% - 1rem);
+  text-align: center;
+}
+
+.school h4, .school h5, .school h3 {
+  color: var(--c7);
+  font-weight: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .school > * {
+    width: 100%;
+  }
+}
+
+.pillars {
+  width: 100%;
+  border: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.pillars > * {
+  /* border: rgba(255,255,255,0.25) 1px solid; */
+  border-radius: 0.5rem;
+  /* padding: 0.5rem 1rem; */
+  color: var(--c8);
+  text-transform: uppercase;
+  letter-spacing: 0.025rem;
+}
+
+@keyframes pulse {
+  0% {
+    color: var(--c8);
+  } 50% {
+    color: var(--c6);
+    text-shadow: 0 0 1rem var(--c6);
+  } 100% {
+    color: var(--c8);
+  }
+}
+
+.shimmer {
+  /* font-size: 2rem; */
+  text-align: center;
+  color: rgba(255, 255, 255, 0.1);
+  background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+  background: -moz-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+  background: gradient(linear, left top, right bottom, from(#444), to(#444), color-stop(0.5, #fff));
+  -webkit-background-size: 3rem 100%;
+  -moz-background-size: 3rem 100%;
+  background-size: 3rem 80%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-animation-name: shimmer;
+  -moz-animation-name: shimmer;
+  animation-name: shimmer;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 2s;
+  /* -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #444;
+}
+
+@-moz-keyframes shimmer {
+  0% {
+      background-position: top left;
+  }
+  100% {
+      background-position: top right;
+  }
+}
+
+@-webkit-keyframes shimmer {
+  0% {
+      background-position: top left;
+  }
+  100% {
+      background-position: top right;
+  }
+}
+
+@-o-keyframes shimmer {
+  0% {
+      background-position: top left;
+  }
+  100% {
+      background-position: top right;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+      background-position: top left;
+  }
+  100% {
+      background-position: top right;
+  }
+}
+
+.pillars.animated > *:first-child {
+  animation: pulse 4s;
+  animation-delay: 0s;
+}
+
+.pillars.animated.shimmer > *:nth-child(2) {
+  animation: pulse 4s;
+  animation-delay: 4s;
+}
+
+.pillars.animated.shimmer > *:nth-child(3) {
+  animation: pulse 4s;
+  animation-delay: 8s;
+}
+
+.pillars.animated.shimmer > *:nth-child(4) {
+  animation: pulse 4s;
+  animation-delay: 12s;
+}
+
+.pillars.animated.shimmer > *:nth-child(5) {
+  animation: pulse 4s;
+  animation-delay: 16s;
+}

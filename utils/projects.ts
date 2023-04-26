@@ -92,7 +92,7 @@ const projects = [
   {
     title: 'Loan Tracking Application',
     description: 'A full stack loan tracking website built using MVC architectural pattern.',
-    skills: ['html', 'js', 'node', 'mongo'],
+    skills: ['html', 'js', 'express', 'mongo'],
     buttons: [
       {
         buttonTitle: 'Live',

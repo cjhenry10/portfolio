@@ -82,7 +82,7 @@ const Nav = () => {
             </a>
           </li>
           <li className={styles['nav-item']}>
-            <a onClick={handleClick} href='#'>
+            <a onClick={handleClick} href='#about'>
               About
             </a>
           </li>
