@@ -22,6 +22,8 @@ const initialState = {
   mongo: false,
   mssql: false,
   ml: false,
+  aws: false,
+  tableau: false
 };
 
 const reducer = (state: any, action: any) => {
@@ -50,6 +52,10 @@ const reducer = (state: any, action: any) => {
       return { ...state, mssql: !state.mssql, all: false };
     case 'ml':
       return { ...state, ml: !state.ml, all: false };
+    case 'aws':
+      return { ...state, aws: !state.aws, all: false };
+    case 'tableau':
+      return { ...state, tableau: !state.tableau, all: false };
     case 'all':
       return initialState;
     default:
@@ -119,7 +125,8 @@ const ProjectSection = () => {
             projectsShown.map((proj) => {
               return (
                 <Project
-                  key={proj.title}
+                  key={proj.id}
+                  id={proj.id}
                   title={proj.title}
                   description={proj.description}
                   skills={proj.skills}

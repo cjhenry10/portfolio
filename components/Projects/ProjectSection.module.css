@@ -6,7 +6,7 @@
   /* transition-timing-function: steps(4, jump-start); */
   /* padding-top: 1rem; */
   margin-top: 1rem;
-  font-family: 'Noto Serif', serif;
+  font-family: var(--font-serif);
 }
 
 .projects {

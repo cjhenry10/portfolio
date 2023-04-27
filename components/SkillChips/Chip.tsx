@@ -67,6 +67,16 @@ const Chip = ({ title, onClick, active }: { title: string, onClick?: Function, a
         chipStyles += ` ${styles.ml}`;
         icon = <Icon type='ml' size={16} />;
         break;
+      case 'aws':
+        text = 'AWS';
+        chipStyles += ` ${styles.aws}`;
+        icon = <Icon type='aws' size={16} />;
+        break;
+      case 'tableau':
+      text = 'Tableau';
+      chipStyles += ` ${styles.tableau}`;
+      icon = <Icon type='tableau' size={16} />;
+      break;
     default: 
       text = 'All';
   }

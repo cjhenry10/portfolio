@@ -6,13 +6,13 @@ import styles from './School.module.css';
 
 const School = () => {
   const [classes, setClasses] = useState(
-    `${styles.pillars} ${styles.animated} ${styles.shimmer}`
+    `${styles.pillars} ${styles.animated}`
   );
 
   const intervalRef = useInterval(() => {
     setClasses(`${styles.pillars}`);
     setTimeout(() => {
-      setClasses(`${styles.pillars} ${styles.animated} ${styles.shimmer}`);
+      setClasses(`${styles.pillars} ${styles.animated}`);
     }, 1000);
   }, 20_000);
   return (
@@ -20,8 +20,8 @@ const School = () => {
       <div className={classes}>
         <div>Programming</div>
         <div>Databases</div>
-        <div>Networking</div>
         <div>Machine Learning</div>
+        <div>Networking</div>
         <div>Cybersecurity</div>
       </div>
       <div>

@@ -10,10 +10,12 @@ import {
   SiTypescript,
   SiNextdotjs,
   SiTableau,
+  SiAmazonaws
 } from 'react-icons/si';
 import { BsFiletypeSql } from 'react-icons/bs';
 import {TbFilter} from 'react-icons/tb'
 import {GiBrain} from 'react-icons/gi';
+import {TfiNewWindow} from 'react-icons/tfi';
 
 
 const Icon = ({ type, size }: { type: string; size?: number }) => {
@@ -60,6 +62,12 @@ const Icon = ({ type, size }: { type: string; size?: number }) => {
       break;
     case 'filter':
       icon = <TbFilter size={size} />
+      break;
+    case 'aws':
+      icon = <SiAmazonaws size={size} />
+      break;
+    case 'new':
+      icon = <TfiNewWindow size={size} />
       break;
   }
   return (

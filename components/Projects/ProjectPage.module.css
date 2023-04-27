@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 90vh;
+  margin: 0 3rem;
+}
+
+.container p {
+  margin: 1rem 4rem;
+  max-width: 750px;
+}
+
+.frame {
+  width: 750px;
+  height: 80vh;
+}
+
+@media screen and (max-width: 960px) {
+  .frame {
+    width: 85vw;
+    height: 65vh;
+  }
+  .container p {
+    margin: 1rem;
+  }
+}

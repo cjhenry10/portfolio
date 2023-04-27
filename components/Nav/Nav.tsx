@@ -70,19 +70,19 @@ const Nav = () => {
         <span className={styles.bar}></span>
       </button>
       <div className={navLinks}>
-        <ul style={{backgroundColor: color }}>
+        <ul>
           <li className={styles['nav-item']}>
-            <a onClick={handleClick} href='#'>
+            <a onClick={handleClick} href='#' className={styles.pulse}>
               Home
             </a>
           </li>
           <li className={styles['nav-item']}>
-            <a onClick={handleClick} href='#projects'>
+            <a onClick={handleClick} href='#projects' className={styles.pulse}>
               Projects
             </a>
           </li>
           <li className={styles['nav-item']}>
-            <a onClick={handleClick} href='#about'>
+            <a onClick={handleClick} href='#about' className={styles.pulse}>
               About
             </a>
           </li>

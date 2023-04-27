@@ -14,7 +14,7 @@
 .landing h1 {
   /* font-size: clamp(2rem, 8vw, 8rem); */
   margin: 0;
-  font-family: 'Noto Serif', serif;
+  font-family: var(--font-serif);
   transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
@@ -35,6 +35,7 @@
   margin-bottom: 0;
   /* position: fixed; */
   /* width: 50vw; */
+  font-family: var(--font-rubik);
 }
 
 .buttons {

@@ -12,6 +12,7 @@
     min-width: 4rem;
     /* font-size: 0.75rem; */
   transition: background-color 500ms ease;
+  font-family: var(--font-rubik);
 }
 
 .chip:hover {
@@ -96,4 +97,14 @@
 .ml.active {
   background-color: hsl(210, 70%, 71%);
   color:hsl(210, 15%, 10%);
+}
+
+.aws.active {
+  background-color: #ff9900;
+  color: #232f3e;
+}
+
+.tableau.active {
+  background-color: #1170aa;
+  color: #fff;
 }

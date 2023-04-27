@@ -129,6 +129,16 @@ const FilterSkills = ({handleClick, state}: {handleClick: Function, state: any})
         title={'ml'}
         active={[state.ml, state.all]}
       />
+      <Chip
+        onClick={() => handleClick('aws')}
+        title={'aws'}
+        active={[state.aws, state.all]}
+      />
+      <Chip
+        onClick={() => handleClick('tableau')}
+        title={'tableau'}
+        active={[state.tableau, state.all]}
+      />
     </div>
   );
 };

@@ -18,7 +18,7 @@ const Progress = () => {
   
   return (
     <div className={styles.container}>
-      <div className={styles.bar} style={{width: `${filled}%`}}><p style={{margin: 0, padding: '0 0.25rem 0 0', textAlign: 'right'}}>{`${filled}%`}</p></div>
+      <div className={styles.bar} style={{width: `${filled}%`}}><p style={{margin: 'auto 0', padding: '0 0.25rem 0 0', textAlign: 'right'}}>{`${filled}%`}</p></div>
     </div>
   )
 }

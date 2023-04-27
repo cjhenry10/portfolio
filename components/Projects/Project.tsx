@@ -3,7 +3,9 @@ import Button from '../Button/Button';
 import Chip from '../SkillChips/Chip';
 import styles from './Project.module.css';
 import Icon from '../Icon/Icon';
+import Link from 'next/link';
 interface propTypes {
+  id: number;
   title: string;
   description?: string;
   buttons?: {
@@ -47,29 +49,64 @@ const Project = (props: propTypes) => {
       case 'next':
         skillChips.push(<Icon type='next' key='next' size={24} />);
         break;
-        case 'mssql':
-          skillChips.push(<Icon type='mssql' key='mssql' size={24} />);
-          break;
-          case 'ml':
-          skillChips.push(<Icon type='ml' key='ml' size={24} />);
-          break;
+      case 'mssql':
+        skillChips.push(<Icon type='mssql' key='mssql' size={24} />);
+        break;
+      case 'ml':
+        skillChips.push(<Icon type='ml' key='ml' size={24} />);
+        break;
+      case 'aws':
+        skillChips.push(<Icon type='aws' key='aws' size={24} />);
+        break;
+      case 'tableau':
+        skillChips.push(<Icon type='tableau' key='tableau' size={24} />);
+        break;
     }
   });
 
   return (
     <div className={styles.project}>
       <h1>{props.title}</h1>
-      <p>
-        {props.description}
-      </p>
+      <p>{props.description}</p>
       <div className={styles.skills}>{skillChips.map((s) => s)}</div>
-      <div>
-        <Button variant='contained' color='var(--c3)'>
+      <div style={{ display: 'flex' }}>
+        {props.buttons?.map((button) => {
+          if (button.buttonLink.startsWith('https')) {
+            return (
+              <a
+                key={button.buttonLink}
+                href={button.buttonLink}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <Button
+                  variant='contained'
+                  color='var(--c3)'
+                  sxc={{ display: 'flex' }}
+                >
+                  <span style={{ marginRight: '0.5rem' }}>
+                    {button.buttonTitle}
+                  </span>
+                  <Icon type='new' size={16} />
+                </Button>
+              </a>
+            );
+          } else if (button.buttonLink.startsWith('/')) {
+            return (
+              <Link key={button.buttonLink} href={button.buttonLink}>
+                <Button variant='contained' color='var(--c3)'>
+                  {button.buttonTitle}
+                </Button>
+              </Link>
+            );
+          }
+        })}
+        {/* <Button variant='contained' color='var(--c3)'>
           Code
         </Button>
         <Button variant='contained' color='var(--c3)'>
           Live
-        </Button>
+        </Button> */}
       </div>
     </div>
   );

@@ -55,8 +55,8 @@ const Landing = () => {
         {/* <FadeIn> */}
         <h1 style={{ zIndex: z, fontSize: font, position: 'fixed', top: `${top}px`, left: `${left}px`, opacity: opacity1}}>Connor Henry</h1>
         {/* </FadeIn> */}
-        <SlideIn delay={'1s'} pos='fixed'>
-        <h3 style={{opacity: opacity, transition: 'opacity 0.25s linear'}}>Under Construction!</h3>
+        <SlideIn delay={'1s'}>
+        <h3 style={{opacity: opacity, transition: 'opacity 0s linear'}}>Under Construction!</h3>
         </SlideIn>
         {/* <FadeIn> */}
         <div className={styles.buttons}>

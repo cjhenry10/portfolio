@@ -37,18 +37,23 @@
 .navbar-links li {
   list-style: none;
   transition: 0.3s background-color;
+  border-radius: 0.25rem;
 }
 
 .navbar-links li a {
   text-decoration: none;
-  color: var(--c6);
+  color: var(--c7);
   padding: 0.75rem;
   display: block;
-  font-size: clamp(1rem, 1vw, 1in);
+  font-size: 1rem;
 }
 
 .navbar-links li:hover {
-  background-color: var(--c4);
+  background-color: var(--c3);
+}
+
+.navbar-links li:hover a {
+  color: var(--c6);
 }
 
 .toggle-button {
@@ -158,16 +163,19 @@
       flex-direction: column;
       align-items: flex-start;
       padding: 0;
+      background-color: var(--c0) !important;
   }
 
   .navbar-links ul {
       width: 100%;
       flex-direction: column;
       position: absolute;
+      background-color: var(--c0) !important;
   }
 
   .navbar-links li {
       text-align: center;
+      background-color: transparent;
   }
 
   .navbar-links.active {
@@ -175,7 +183,7 @@
   }
 
   .navbar-links.active ul {
-      background-color: var(--c4);
+      /* background-color: var(--c4); */
       animation: growDown 300ms ease-in-out forwards;
       transform-origin: top center;
   }
@@ -202,4 +210,40 @@
   .navbar-links li a {
     /* font-size: 3rem; */
   }
+}
+
+@keyframes pulseNav {
+  0% {
+    color: var(--c7);
+  } 50% {
+    color: var(--c6);
+    text-shadow: 1px 0 0.5rem var(--c6);
+  } 100% {
+    color: var(--c7);
+  }
+}
+
+.nav-item:first-child a {
+  animation: pulseNav 2s;
+  animation-delay: 5s;
+}
+
+.nav-item:nth-child(2) a {
+  animation: pulseNav 2s;
+  animation-delay: 5.5s;
+}
+
+.nav-item:nth-child(3) a {
+  animation: pulseNav 2s;
+  animation-delay: 6s;
+}
+
+.nav-item:nth-child(4) a {
+  animation: pulseNav 2s;
+  animation-delay: 6.5s;
+}
+
+.nav-item:nth-child(5) a {
+  animation: pulseNav 2s;
+  animation-delay: 7s;
 }
