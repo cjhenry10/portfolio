@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 90vh;
+  margin: 0 auto;
+  max-width: 750px;
+}
+
+.container > *:first-child {
+  margin-right: auto;
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    max-width: 85vw;
+  }
+}

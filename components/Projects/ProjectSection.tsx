@@ -136,7 +136,7 @@ const ProjectSection = () => {
             })
           ) : (
             <p>
-              No projects match this filter.{' '}
+              No projects match this filter. Some should be added soon!{' '}
               <Button
                 onClick={() => {
                   dispatch({ type: 'all' });

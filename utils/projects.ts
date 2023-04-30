@@ -22,8 +22,8 @@ const projects = [
         buttonLink: 'https://github.com/cjhenry10/capstone-ui',
       },
       {
-        buttonTitle: 'More XX',
-        buttonLink: '',
+        buttonTitle: 'More',
+        buttonLink: '/help-desk-wizard',
       },
     ],
   },
@@ -62,13 +62,9 @@ const projects = [
     skills: ['python', 'html', 'css', 'js'],
     buttons: [
       {
-        buttonTitle: 'Live XX',
-        buttonLink: '',
-      },
-      {
-        buttonTitle: 'More XX',
-        buttonLink: '',
-      },
+        buttonTitle: 'More',
+        buttonLink: '/pi-weather',
+      }
     ],
   },
   {
@@ -122,13 +118,9 @@ const projects = [
     skills: ['aws'],
     buttons: [
       {
-        buttonTitle: 'Live XX',
-        buttonLink: '',
-      },
-      {
-        buttonTitle: 'More XX',
-        buttonLink: '',
-      },
+        buttonTitle: 'More',
+        buttonLink: '/aws-capstone',
+      }
     ],
   },
   {
@@ -138,13 +130,9 @@ const projects = [
     skills: ['sql', 'mssql'],
     buttons: [
       {
-        buttonTitle: 'Live XX',
-        buttonLink: '',
-      },
-      {
-        buttonTitle: 'More XX',
-        buttonLink: '',
-      },
+        buttonTitle: 'More',
+        buttonLink: '/retail-db',
+      }
     ],
   },
 ];

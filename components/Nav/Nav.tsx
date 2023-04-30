@@ -86,6 +86,11 @@ const Nav = () => {
               About
             </a>
           </li>
+          <li className={styles['nav-item']}>
+            <a onClick={handleClick} href='/resume' className={styles.pulse}>
+              Resume
+            </a>
+          </li>
         </ul>
       </div>
     </nav>

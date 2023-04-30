@@ -7,6 +7,10 @@
   margin: 0 3rem;
 }
 
+.container h2 {
+  margin-top: 0;
+}
+
 .container p {
   margin: 1rem 4rem;
   max-width: 750px;
@@ -15,6 +19,7 @@
 .frame {
   width: 750px;
   height: 80vh;
+  margin-bottom: 2rem;
 }
 
 @media screen and (max-width: 960px) {
