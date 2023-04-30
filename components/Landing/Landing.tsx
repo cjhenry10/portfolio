@@ -61,7 +61,7 @@ const Landing = () => {
         {/* <FadeIn> */}
         <div className={styles.buttons}>
         <a href='https://github.com/cjhenry10' target='_blank' rel='noopener noreferrer'><BsGithub /></a>
-        <a href='https://www.linkedin.com/in/connor-henry-b071a6211/' target='_blank' rel='noopener noreferrer'><BsLinkedin /></a>
+        <a href='https://www.linkedin.com/in/cjhenry10/' target='_blank' rel='noopener noreferrer'><BsLinkedin /></a>
         </div>
         {/* </FadeIn> */}
       </div>
