@@ -24,6 +24,14 @@ const Nav = () => {
     }
   };
 
+  const smoothScrollTo = (id: string) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({
+      block: 'start',
+      behavior: 'smooth',
+    })
+  }
+
   // useEffect(() => {
   //   const handleScroll = () => {
   //     if (window.scrollY > window.innerHeight - (window.innerHeight/2)) {
@@ -72,17 +80,17 @@ const Nav = () => {
       <div className={navLinks}>
         <ul>
           <li className={styles['nav-item']}>
-            <a onClick={handleClick} href='#' className={styles.pulse}>
+            <a onClick={() => {handleClick(); smoothScrollTo('top')}} className={styles.pulse}>
               Home
             </a>
           </li>
           <li className={styles['nav-item']}>
-            <a onClick={handleClick} href='#projects' className={styles.pulse}>
+            <a onClick={() => {handleClick(); smoothScrollTo('projects')}} className={styles.pulse}>
               Projects
             </a>
           </li>
           <li className={styles['nav-item']}>
-            <a onClick={handleClick} href='#about' className={styles.pulse}>
+            <a onClick={() => {handleClick(); smoothScrollTo('about')}} className={styles.pulse}>
               About
             </a>
           </li>

@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import FadeIn from '../Transitions/FadeIn';
-import SlideIn from '../Transitions/SlideIn';
+// import SlideIn from '../Transitions/SlideIn';
 import styles from './Landing.module.css';
 import { vh } from '../../utils/viewport';
 import Background from './Background';
@@ -50,14 +50,12 @@ const Landing = () => {
   }, []);
   return (
     <>
-      <div className={styles.landing}>
+      <div id='top' className={styles.landing}>
         <Background/>
         {/* <FadeIn> */}
         <h1 style={{ zIndex: z, fontSize: font, position: 'fixed', top: `${top}px`, left: `${left}px`, opacity: opacity1}}>Connor Henry</h1>
         {/* </FadeIn> */}
-        <SlideIn delay={'1s'}>
-        <h3 style={{opacity: opacity, transition: 'opacity 0s linear'}}>Full-stack Development | Machine Learning | AWS</h3>
-        </SlideIn>
+        <h3>Full-Stack Development | Machine Learning | AWS</h3>
         {/* <FadeIn> */}
         <div className={styles.buttons}>
         <a href='https://github.com/cjhenry10' target='_blank' rel='noopener noreferrer'><BsGithub /></a>

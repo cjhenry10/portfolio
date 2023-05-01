@@ -15,17 +15,17 @@ const AboutSection = () => {
         </FadeIn>
         <div className={styles.bio}>
           <p>
-            Connor is a an Information Technology graduate student at Arizona
+            Connor is an Information Technology graduate student at Arizona
             State University focusing on information systems. He enjoys learning
-            about many of the latest technologies such as NextJS, Machine
-            Learning, and AWS. As a tutor, Connor has helped others develop
-            their skills in HTML, CSS, JavaScript, Excel, Tableau, SQL, and
-            Python. In addition to his technical skills, Connor also has
-            experience in management, which has helped him develop important
-            leadership skills like delegation and conflict management during his
-            time as a store manager at Rite Aid. In his free time, Connor enjoys
-            building personal projects, gaming, and spending time with loved
-            ones.
+            about many of the latest technologies such as machine learning,
+            NextJS, and AWS. As a tutor, Connor has helped aspiring web
+            developers and data analysts strengthen their skillset with HTML,
+            CSS, JavaScript, Excel, Tableau, SQL, and Python. In addition to his
+            technical skills, he also has experience in management, which
+            has helped him develop important leadership skills like delegation
+            and conflict management during his time as a store manager at Rite
+            Aid. In his free time, Connor enjoys building personal projects,
+            gaming, and spending time with loved ones.
           </p>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           {/* <img src="/keyboard.jpg" alt="backlit keyboard" />       */}

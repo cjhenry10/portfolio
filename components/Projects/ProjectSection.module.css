@@ -1,16 +1,21 @@
 .h1 {
   overflow-x: hidden;
-  position: absolute;
+  /* position: absolute; */
   font-size: clamp(2rem, 4vw, 3rem);
   transition: all 0.75s ease-out;
   /* transition-timing-function: steps(4, jump-start); */
   /* padding-top: 1rem; */
   margin-top: 1rem;
   font-family: var(--font-serif);
+  text-align: right;
+  /* margin-right: 100px; */
 }
 
 .projects {
   min-height: 100vh;
+  margin: 0 auto;
+  max-width: min(85vw, 1400px);
+  scroll-margin: 60px;
 }
 
 .container {

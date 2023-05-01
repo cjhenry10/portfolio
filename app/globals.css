@@ -145,12 +145,12 @@ html {
   }
 }
 
-:target:before {
+/* :target:before {
   content: "";
   display: block;
   height: 55px;
   margin: -55px 0 0;
-}
+} */
 
 body {
   margin: 0;

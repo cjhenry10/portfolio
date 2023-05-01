@@ -65,7 +65,7 @@ const FilterSkills = ({handleClick, state}: {handleClick: Function, state: any})
         display: 'flex',
         flexWrap: 'wrap',
         gap: '0.5rem',
-        paddingTop: '10vh',
+        // paddingTop: '10vh',
         maxWidth: 'min(85vw, 1400px)',
         margin: '0 auto',
       }}

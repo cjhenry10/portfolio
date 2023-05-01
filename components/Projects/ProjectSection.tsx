@@ -6,6 +6,7 @@ import Project from './Project';
 import projects from '@/utils/projects';
 import FilterSkills from './FilterSkills';
 import Button from '../Button/Button';
+import FadeIn from '../Transitions/FadeIn';
 
 const initialState = {
   // projectsShown: [],
@@ -70,7 +71,7 @@ const ProjectSection = () => {
     dispatch({ type: type });
   };
 
-  const [scrollY, setScrollY] = useState(0);
+  const [scrollY, setScrollY] = useState(500);
   const [projectsShown, setProjectsShown] = useState(projects);
 
   const filterProjects = (filter: any) => {
@@ -112,12 +113,14 @@ const ProjectSection = () => {
     <>
       <section id='projects' className={styles.projects}>
         {/* <SlideIn> */}
+        <FadeIn delay='500ms'>
         <h1
           className={styles.h1}
-          style={{ transform: `translateX(${scrollY}px)` }}
+          // style={{ transform: `translateX(${scrollY}px)` }}
         >
           Projects
         </h1>
+        </FadeIn>
         {/* </SlideIn> */}
         <FilterSkills state={state} handleClick={handleClick} />
         <div className={styles.container}>

@@ -1,7 +1,7 @@
 const projects = [
   {
     id: 0,
-    title: 'Frontend Quiz App',
+    title: 'Front-End Quiz App',
     description: 'Users can take or create questions based on writing HTML, CSS, or JavaScript.',
     skills: ['react', 'ts', 'css', 'next', 'mongo'],
     buttons: [
@@ -42,7 +42,7 @@ const projects = [
   {
     id: 3,
     title: 'Dark Souls Matching Game',
-    description: 'Dark-souls-themed card matching game that kills you if you don\'t win in a certain number of attempts.',
+    description: 'Dark Souls-themed card matching game that kills you if you don\'t win in a certain number of attempts.',
     skills: ['html', 'css', 'js'],
     buttons: [
       {
@@ -58,7 +58,7 @@ const projects = [
   {
     id: 4,
     title: 'Raspberry Pi Weather Monitoring',
-    description: 'Using Python libraries for the Raspberry Pi along with JavaScript websockets, I created a self hosted website that displayed the temperature, air pressure, and humidity.',
+    description: 'Using Python libraries for the Raspberry Pi along with JavaScript WebSocket, I created a self-hosted website that displays the temperature, air pressure, and humidity.',
     skills: ['python', 'html', 'css', 'js'],
     buttons: [
       {
@@ -82,7 +82,7 @@ const projects = [
   {
     id: 6,
     title: 'Loan Tracking Application',
-    description: 'A full stack loan tracking website built using MVC architectural pattern.',
+    description: 'Using the MVC architectural pattern, I built a full-stack loan tracking application.',
     skills: ['html', 'js', 'express', 'mongo'],
     buttons: [
       {
@@ -98,7 +98,7 @@ const projects = [
   {
     id: 7,
     title: 'Stock Prediction LSTM Neural Network',
-    description: 'Using five-year historical stock data from Yahoo Finance, I trained a model to predict the 30 day future of ^NYA, the NYSE Composite Index.',
+    description: 'Using five-year historical stock data from Yahoo Finance, I trained a model to predict the 30-day future of ^NYA, the NYSE Composite Index.',
     skills: ['python', 'ml'],
     buttons: [
       {
@@ -114,7 +114,7 @@ const projects = [
   {
     id: 8,
     title: 'AWS Capstone Project',
-    description: 'An unguided capstone project from the AWS Academy Cloud Architect course involving setting up an application and a connected database in the cloud for a scientific research website.',
+    description: 'At the end of the AWS Academy Cloud Architecting course, I deployed an application to the cloud running on MySQL RDS and an Auto Scaling Group of EC2 instances spread across two availability zones.',
     skills: ['aws'],
     buttons: [
       {
@@ -126,7 +126,7 @@ const projects = [
   {
     id: 9,
     title: 'Product Outdates Database',
-    description: 'A report for a database designed for a retail store to keep track of outdated products.',
+    description: 'This report shows the design and development of a retail product management database.',
     skills: ['sql', 'mssql'],
     buttons: [
       {

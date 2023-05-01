@@ -1,6 +1,6 @@
 import './globals.css'
 import Nav from '@/components/Nav/Nav'
-import {inter, rubik, jakarta, serif} from '@/fonts/fonts';
+import {inter, rubik, jakarta, serif, nunito} from '@/fonts/fonts';
 
 export const metadata = {
   title: 'Connor Henry',
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${rubik.variable} ${serif.variable} ${jakarta.className}`}>
+    <html lang="en" className={`${inter.variable} ${rubik.variable} ${serif.variable} ${nunito.className}`}>
       <body>
         {children}
         </body>

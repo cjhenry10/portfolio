@@ -1,0 +1,13 @@
+.frame {
+  border: none;
+  width: 750px;
+  height: 100vh;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 960px) {
+  .frame {
+    width: 85vw;
+    height: 65vh;
+  }
+}

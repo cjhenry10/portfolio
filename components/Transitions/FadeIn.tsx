@@ -22,7 +22,7 @@ const FadeIn = (props: propTypes) => {
       setClasses(`${styles.hidden}`);
     }
   }, [inView]);
-
+  console.log(classes);
   return (
     <div className={classes} ref={ref} style={{transitionDelay: props.delay}}>
       {props.children}

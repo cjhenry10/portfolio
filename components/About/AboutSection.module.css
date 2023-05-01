@@ -12,8 +12,9 @@
 }
 
 .about {
-  min-height: 100vh;
   position: relative;
+  scroll-margin: 60px;
+  margin-bottom: 2rem;
 }
 
 .bio {

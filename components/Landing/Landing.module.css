@@ -29,13 +29,17 @@
 }
 
 .landing h3 {
-  font-size: clamp(1.2rem, 3vw, 3rem);
-  z-index: 0;
+  font-size: clamp(1.2rem, 2.5vw, 2.5rem);
+  z-index: 75;
   margin-top: 5vh;
   margin-bottom: 0;
-  /* position: fixed; */
-  /* width: 50vw; */
+  animation: fadeIn 5s;
   font-family: var(--font-rubik);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0;}
+  to { opacity: 1; }
 }
 
 .buttons {
