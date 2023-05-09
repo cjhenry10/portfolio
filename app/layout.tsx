@@ -1,4 +1,5 @@
 import './globals.css'
+import '@/prismjs/prism-dracula.css';
 import Nav from '@/components/Nav/Nav'
 import {inter, rubik, jakarta, serif, nunito} from '@/fonts/fonts';
 

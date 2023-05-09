@@ -47,11 +47,11 @@ const projects = [
     buttons: [
       {
         buttonTitle: 'Live',
-        buttonLink: 'https://wd2-module-9-final-03-project-game-3-match-g-connorhenry2.asuwd1su21.repl.co/',
+        buttonLink: 'https://matchinggame.connorhenry2.repl.co/',
       },
       {
         buttonTitle: 'Code',
-        buttonLink: 'https://replit.com/@ASUWD1SU21/WD2-Module-9-Final-03-Project-Game-3-Match-G-ConnorHenry2',
+        buttonLink: 'https://replit.com/@ConnorHenry2/MatchingGame#script.js',
       },
     ],
   },
