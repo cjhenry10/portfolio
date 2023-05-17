@@ -1,0 +1,10 @@
+.container {
+  transform: translateX(1700%);
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    transform: none;
+    right: 1rem;
+  }
+}

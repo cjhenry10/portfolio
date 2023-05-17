@@ -1,5 +1,17 @@
 const projects = [
   {
+    id: 123,
+    title: 'Learn',
+    description: 'Articles I\'ve written for work and for fun explaining tech concepts.',
+    skills: ['react', 'ts', 'css', 'next'],
+    buttons: [
+      {
+        buttonTitle: 'Live',
+        buttonLink: 'https://connorhenry.dev/learn',
+      },
+    ],
+  },
+  {
     id: 0,
     title: 'Front-End Quiz App',
     description: 'Users can take or create questions based on writing HTML, CSS, or JavaScript.',

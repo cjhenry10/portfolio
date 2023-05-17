@@ -1,18 +1,18 @@
-import Link from 'next/link';
-import { getAllPostsMeta } from '@/utils/mdx';
+import Posts from "@/components/Articles/Posts"
+import Codeblock from "@/components/Codeblock/CodeblockAlt"
 
-export default async function Learn() {
-  const posts = await getAllPostsMeta();
-  const postPreviews = posts.map((post) => (
-    <div key={post.slug}>
-        <Link href={`/learn/${post.slug}`}>
-          {/* @ts-expect-error */}
-          <h2>{post.title}</h2>
-          </Link>
-        </div>
-        ))
+export const revalidate = 10
+
+export default function Home() {
   return (
-    <div>{postPreviews}</div>
+    <div className="mx-auto">
+      <h1 className="my-6 text-5xl text-center dark:text-white use-serif">
+        Learn
+      </h1>
+      <div className="lg:-mx-12 md:mx-auto">
+      {/* @ts-expect-error Server component */}
+      <Posts />
+      </div>
+    </div>
   )
-    
 }

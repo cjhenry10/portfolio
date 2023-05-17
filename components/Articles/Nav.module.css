@@ -7,31 +7,35 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: var(--dark2); */
-  color: var(--c6);
+  background-color: transparent !important;
+  color: inherit;
   padding: 0 clamp(1rem, 10vw, 40rem);
-  height: clamp(2.5vh, 3rem, 6vh);
-  position: fixed;
+  height: auto;
+  /* position: fixed; */
   width: 100%;
   top: 0;
-  z-index: 100;
-  transition: background-color 0.5s linear !important;
-  backdrop-filter: blur(10px);
+  z-index: 1000;
   box-sizing: border-box;
-  box-shadow: 0 4px 6px 0 rgba(0,0,0,.2);
+  /* box-shadow: 0 4px 6px 0 rgba(0,0,0,.2); */
+  box-shadow: 0 0 0 1px hsla(0,0%,80%,.25);
+  border-bottom: solid 1px hsla(0,0%,80%,.25);
 }
 
 .brand-title {
   /* font-size: 1.5rem; */
   margin: .5rem;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-links ul {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: row;
   transition: background-color 0.5s linear !important;
   z-index: 500;
+  width: auto;
 }
 
 .navbar-links li {
@@ -39,22 +43,25 @@
   transition: 0.3s background-color;
   border-radius: 0.25rem;
   cursor: pointer;
+  width: fit-content;
 }
 
 .navbar-links li a {
   text-decoration: none;
-  color: var(--c7);
-  padding: 0.75rem;
+  /* color: var(--c7); */
+  padding: 0.375rem 0.75rem;
   display: block;
   font-size: 1rem;
 }
 
 .navbar-links li:hover {
-  background-color: var(--c3);
+  background-color: var(--c2);
 }
 
 .navbar-links li:hover a {
-  color: var(--c6);
+  /* color: var(--c6); */
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 1px hsla(0,0%,80%,.25);
 }
 
 .toggle-button {
@@ -65,16 +72,17 @@
   /* display: flex; */
   flex-direction: column;
   justify-content: space-between;
-  height: 21px;
-  width: 30pt;
+  height: 19px;
+  width: 24pt;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  color: inherit;
   box-shadow: none !important;
 }
 
 .toggle-button .bar {
-  height: 3px;
+  height: 2px;
   width: 100%;
   background-color: var(--c6);
   border-radius: 10px;
@@ -153,9 +161,9 @@
 
 @media (max-width: 768px) {
   .toggle-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .navbar-links {
@@ -167,19 +175,24 @@
       flex-direction: column;
       align-items: flex-start;
       padding: 0;
-      background-color: var(--c0) !important;
+      background-color: inherit !important;
   }
 
   .navbar-links ul {
       width: 100%;
       flex-direction: column;
       position: absolute;
-      background-color: var(--c0) !important;
+      background-color: inherit;
   }
 
   .navbar-links li {
       text-align: center;
       background-color: transparent;
+      width: 100%;
+  }
+
+  .navbar-links li a:hover {
+    box-shadow: none;
   }
 
   .navbar-links.active {
@@ -204,50 +217,4 @@
       transform-origin: center;
   }
   
-}
-
-@media only screen and (min-width: 1440px) {
-  .navbar {
-    height: 6vh;
-  }
-
-  .navbar-links li a {
-    /* font-size: 3rem; */
-  }
-}
-
-@keyframes pulseNav {
-  0% {
-    color: var(--c7);
-  } 50% {
-    color: var(--c6);
-    text-shadow: 1px 0 0.5rem var(--c6);
-  } 100% {
-    color: var(--c7);
-  }
-}
-
-.nav-item:first-child a {
-  animation: pulseNav 2s;
-  animation-delay: 5s;
-}
-
-.nav-item:nth-child(2) a {
-  animation: pulseNav 2s;
-  animation-delay: 5.5s;
-}
-
-.nav-item:nth-child(3) a {
-  animation: pulseNav 2s;
-  animation-delay: 6s;
-}
-
-.nav-item:nth-child(4) a {
-  animation: pulseNav 2s;
-  animation-delay: 6.5s;
-}
-
-.nav-item:nth-child(5) a {
-  animation: pulseNav 2s;
-  animation-delay: 7s;
 }

@@ -77,7 +77,7 @@ export default function Button(props: any) {
   }
 
   return (
-    <button disabled={props.disabled} style={{...props.sxc, ...sxs}} className={`${buttonClasses} ${props.className}`} type="button" onClick={handleClick}>
+    <button disabled={props.disabled} style={{...sxs, ...props.sxc}} className={`${buttonClasses} ${props.className}`} type="button" onClick={handleClick}>
       {/* {props.label} */}
       {props.children}
     </button>

@@ -49,7 +49,7 @@ const AboutSection = () => {
             />
           </div>
         </div>
-        <h2>Education</h2>
+        <h2 className='py-5 text-2xl'>Education</h2>
         <School />
       </div>
     </section>

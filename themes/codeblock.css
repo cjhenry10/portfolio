@@ -1,0 +1,191 @@
+html.light pre[data-theme="dark"],
+html.light div[data-theme="dark"] {
+  display: none;
+}
+
+html.dark pre[data-theme="light"],
+html.dark div[data-theme="light"] {
+  display: none;
+}
+
+div[data-rehype-pretty-code-fragment] pre {
+  border-radius: 0.25rem;
+}
+
+.dark div[data-rehype-pretty-code-fragment] {
+  box-shadow: 0 0 0 1px hsla(0,0%,100%,.15);
+  border-radius: 0.25rem;
+}
+
+.light div[data-rehype-pretty-code-fragment] {
+  /* box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a; */
+  box-shadow: 0 0 0 1px hsla(0,0%,75%,.5);
+  border-radius: 0.25rem;
+}
+
+div[data-rehype-pretty-code-title] {
+  font-family: monospace;
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: -1.5rem;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  position: relative;
+  z-index: 100;
+  /* off */
+  display: none;
+}
+
+.custom-headers {
+  /* margin-inline: -16px; */
+  margin-top: -12px;
+  margin-bottom: 0.5rem;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+}
+
+.dark .custom-headers {
+  /* background-color: #171c26; */
+  background-color: hsl(220, 25%, 15%);
+  color: var(--c6);
+}
+
+.light .custom-headers {
+  background-color: #dde0e4;
+  color: #0f172a;
+}
+
+/* .dark div[data-rehype-pretty-code-title] {
+  background-color: #171c26;
+  color: var(--c6);
+}
+
+.light div[data-rehype-pretty-code-title] {
+
+} */
+
+pre > code {
+  display: grid;
+}
+
+pre {
+  border-radius: 0.25rem !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  font-size: 14px !important;
+  font-weight: normal !important;
+}
+
+pre code {
+  counter-reset: line;
+}
+ 
+pre code > .line::before {
+  counter-increment: line;
+  content: counter(line);
+ 
+  /* Other styling */
+  display: inline-block;
+  width: 1rem;
+  margin-right: 2rem;
+  margin-left: 0.5rem;
+  text-align: right;
+  color: gray;
+}
+
+code > .line::before {
+  width: 0 !important;
+  margin-right: 0.5rem;
+}
+ 
+/* code[data-line-numbers-max-digits="2"] > .line::before {
+  width: 2rem;
+}
+ 
+code[data-line-numbers-max-digits="3"] > .line::before {
+  width: 3rem;
+} */
+
+pre code {
+  /* box-sizing: border-box; */
+  overflow-x: auto;
+  width: 100%;
+}
+
+/* pre code .line {
+  overflow: hidden;
+} */
+
+/**
+ * Inspired by gatsby remark prism - https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/
+ * 1. Make the element just wide enough to fit its content.
+ * 2. Always fill the visible space in .code-highlight.
+ */
+
+pre .line {
+  /* display: block; */
+  /* padding-left: 14px;
+  padding-right: 14px;
+  margin-left: -16px;
+  margin-right: -16px; */
+  border-left: 4px solid rgba(0, 0, 0, 0); /* Set placeholder for highlight accent border color to transparent */
+}
+
+.code-line.inserted {
+  background-color: rgba(16, 185, 129, 0.2); /* Set inserted line (+) color */
+}
+
+.code-line.deleted {
+  background-color: rgba(239, 68, 68, 0.2); /* Set deleted line (-) color */
+}
+
+.highlighted {
+  float: left; /* 1 */
+ 
+}
+
+.dark .highlighted {
+  background-color: rgba(55, 65, 81, 0.5); /* Set highlight bg color */
+  border-left: 4px solid hsl(220, 91%, 60%); /* Set highlight accent border color */
+}
+
+.light .highlighted {
+  background-color: #dde0e455; /* Set highlight bg color */
+  border-left: 4px solid hsl(25, 100%, 70%);; /* Set highlight accent border color */
+}
+
+.line::before {
+  display: inline-block;
+  width: 1rem;
+  text-align: right;
+  margin-right: 16px;
+  margin-left: -8px;
+  color: rgb(156, 163, 175); /* Line number color */
+  content: attr(line);
+}
+
+/* inline code */
+code::before,
+code::after {
+  content: '' !important;
+}
+
+.light [data-rehype-pretty-code-fragment] [data-theme="dark"] {
+  display: none;
+}
+
+.dark [data-rehype-pretty-code-fragment] [data-theme="light"] {
+  display: none;
+}
+
+[data-rehype-pretty-code-fragment] > code {
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  background-color: #dde0e4;
+}

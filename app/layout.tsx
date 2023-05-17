@@ -1,5 +1,4 @@
 import './globals.css'
-import '@/prismjs/prism-dracula.css';
 import Nav from '@/components/Nav/Nav'
 import {inter, rubik, jakarta, serif, nunito} from '@/fonts/fonts';
 
@@ -14,9 +13,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${rubik.variable} ${serif.variable} ${nunito.className}`}>
+    <html lang="en" className={`${inter.variable} ${rubik.variable} ${serif.variable} ${nunito.className} dark`}>
       <body>
+        <main>
         {children}
+        </main>
         </body>
     </html>
   )

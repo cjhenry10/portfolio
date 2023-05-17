@@ -55,7 +55,7 @@ const Landing = () => {
         {/* <FadeIn> */}
         <h1 style={{ zIndex: z, fontSize: font, position: 'fixed', top: `${top}px`, left: `${left}px`, opacity: opacity1}}>Connor Henry</h1>
         {/* </FadeIn> */}
-        <h3>Full-Stack Development | Machine Learning | AWS</h3>
+        <h3 style={{textAlign:'center'}}>Full-Stack Development | Machine&nbsp;Learning | AWS</h3>
         {/* <FadeIn> */}
         <div className={styles.buttons}>
         <a href='https://github.com/cjhenry10' target='_blank' rel='noopener noreferrer'><BsGithub /></a>

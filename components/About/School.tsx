@@ -25,16 +25,16 @@ const School = () => {
         <div>Cybersecurity</div>
       </div>
       <div>
-        <h3>Arizona State University</h3>
-        <h2>Information Technology, B.S.</h2>
-        <h4>Information Systems — Summa Cum Laude</h4>
-        <h5>January 2018 - December 2022</h5>
+        <h3 className='py-2 text-xl'>Arizona State University</h3>
+        <h2 className='py-2 text-2xl'>Information Technology, B.S.</h2>
+        <h4 className='py-2 text-lg'>Information Systems — Summa Cum Laude</h4>
+        <h5 className='py-2 text-lg'>January 2018 - December 2022</h5>
       </div>
       <div>
-        <h3>Arizona State University</h3>
-        <h2>Information Technology, M.S.</h2>
-        <h4>Information Systems — 4.0 GPA</h4>
-        <h5>December 2022 - December 2023</h5>
+        <h3 className='py-2 text-xl'>Arizona State University</h3>
+        <h2 className='py-2 text-2xl'>Information Technology, M.S.</h2>
+        <h4 className='py-2 text-lg'>Information Systems — 4.0 GPA</h4>
+        <h5 className='py-2 text-lg'>December 2022 - December 2023</h5>
         <Progress />
       </div>
     </div>

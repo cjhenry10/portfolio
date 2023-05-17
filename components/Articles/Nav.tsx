@@ -1,13 +1,18 @@
 'use client'
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './Nav.module.css';
-import { FiMenu } from 'react-icons/fi';
 import Link from 'next/link';
+import Toggle from "@/components/Toggle/Toggle"
+import {useLocalStorage} from 'usehooks-ts'
+import {BsMoon, BsSun} from 'react-icons/bs';
+import { FiMenu } from 'react-icons/fi';
+import ThemeToggle from '../Toggle/ThemeToggle';
 
 const Nav = () => {
-  const [color, setColor] = useState(`transparent`);
   const [navLinks, setNavLinks] = useState(`${styles['navbar-links']}`);
   const navRef = useRef<HTMLElement | null>(null);
+  const [isDarkTheme, setDarkTheme] = useLocalStorage('darkTheme', true);
+  const [isToggled, setIsToggled] = useState(isDarkTheme);
 
   let timer;
   const handleClick = () => {
@@ -26,17 +31,17 @@ const Nav = () => {
     }
   };
 
-  const smoothScrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({
-      block: 'start',
-      behavior: 'smooth',
-    })
-  }
-
   useEffect(() => {
-    document.querySelector('html')?.classList.add('dark');
-  }, [])
+    if (isToggled) {
+      document.querySelector('html')?.classList.add('dark');
+      document.querySelector('html')?.classList.remove('light');
+      setDarkTheme(true)
+    } else {
+      document.querySelector('html')?.classList.remove('dark');
+      document.querySelector('html')?.classList.add('light');
+      setDarkTheme(false)
+    }
+  }, [isToggled])
 
   useEffect(() => {
     const handleClickOutside = (e: any) => {
@@ -56,12 +61,19 @@ const Nav = () => {
   }, [navRef, navLinks]);
 
   return (
+    <>
     <nav
       ref={navRef}
-      className={`${styles.navbar} ${styles['no-transitions']}`}
-      style={{ backgroundColor: color }}
+      className={`${styles.navbar} ${styles['no-transitions']} article-nav-top`}
     >
-      <div className={styles['brand-title']}></div>
+      <div className={`${styles['brand-title']} use-serif`}>
+            <div className='flex items-center mr-3'>
+      <ThemeToggle />
+      </div>
+        <Link href='/'>
+              Connor Henry
+            </Link>
+            </div>
       <button
         type='button'
         className={styles['toggle-button']}
@@ -72,36 +84,28 @@ const Nav = () => {
         <span className={styles.bar}></span> */}
         <FiMenu size={20} />
       </button>
+      
       <div className={navLinks}>
         <ul>
+        {/* <div className='flex items-center justify-center gap-1 py-1.5 px-3'> */}
+            {/* <BsSun size={12} /> */}
+            {/* <Toggle isToggled={isToggled} onToggle={() => setIsToggled(prev => !prev)} /> */}
+            {/* <BsMoon size={12} /> */}
+            {/* </div> */}
           <li className={styles['nav-item']}>
-            <a onClick={() => {handleClick(); smoothScrollTo('top')}} className={styles.pulse}>
-              Home
-            </a>
-          </li>
-          <li className={styles['nav-item']}>
-            <a onClick={() => {handleClick(); smoothScrollTo('projects')}} className={styles.pulse}>
-              Projects
-            </a>
-          </li>
-          <li className={styles['nav-item']}>
-            <a onClick={() => {handleClick(); smoothScrollTo('about')}} className={styles.pulse}>
-              About
-            </a>
-          </li>
-          <li className={styles['nav-item']}>
-            <a onClick={handleClick} href='/resume' className={styles.pulse}>
-              Resume
-            </a>
-          </li>
-          <li className={styles['nav-item']}>
-            <Link href='/learn' className={styles.pulse}>
-              Learn
+            <Link href='/learn'>
+              Articles
             </Link>
           </li>
+          {/* <li className={styles['nav-item']}>
+            <Link href='/learn/tags'>
+              Tags
+            </Link>
+          </li> */}
         </ul>
       </div>
     </nav>
+    </>
   );
 };
 
