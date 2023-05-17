@@ -67,6 +67,10 @@ body {
   color: var(--dark-text-body) !important;
 }
 
+.article-section {
+  min-height: calc(100vh - 47px);
+}
+
 .dark .article-nav-top,
 .dark .article-section {
   background-color: var(--dark-bg);
