@@ -4,10 +4,8 @@ import rehypeSlug from 'rehype-slug';
 import toc from '@jsdevtools/rehype-toc'
 import Codeblock from '@/components/Codeblock/Codeblock';
 import remarkGfm from 'remark-gfm';
-import components, {link} from './componentsMap';
+import components from './componentsMap';
 import rehypePrettyCode from 'rehype-pretty-code';
-import rehypeCodeTitles from 'rehype-code-titles';
-import rehypePrism from 'rehype-prism-plus';
 import {visit} from 'unist-util-visit';
 
 type Filetree = {
@@ -36,7 +34,6 @@ export async function getPostByName(fileName: string): Promise<BlogPost | undefi
         // @ts-expect-error
         components: {
             Codeblock,
-            // CodeblockAlt,
             ...components
         },
         options: {
@@ -46,23 +43,18 @@ export async function getPostByName(fileName: string): Promise<BlogPost | undefi
                     remarkGfm
                 ],
                 rehypePlugins: [
-                    // rehypeHighlight,
                     rehypeSlug,
                     () => (tree) => {
                         visit(tree, (node) => {
-                            // console.log(node.type);
                           if (node?.type === "element" && node?.tagName === "pre") {
                             const [codeEl] = node.children;
                             let metaDataTemp;
                             if (codeEl.data?.meta) {
                                 metaDataTemp = codeEl.data.meta;
-                                // console.log(node);
                             }
                             if (codeEl.tagName !== "code") return;
-                            // console.log(codeEl.data);
                             node.raw = codeEl.children?.[0].value;
                             node.metaData = metaDataTemp;
-                            // console.log(codeEl);
                             codeEl.metaData = metaDataTemp;
                           }
                         });
@@ -100,7 +92,6 @@ export async function getPostByName(fileName: string): Promise<BlogPost | undefi
                               if (child.tagName === "pre") {
                                 child.properties["raw"] = node.raw;
                                 child.properties["metaData"] = node.metaData;
-                                // console.log(node.metaData)
                               }
                               for (const child2 of child.children) {
                                 if (child2.tagName === "code") {
@@ -111,33 +102,16 @@ export async function getPostByName(fileName: string): Promise<BlogPost | undefi
                           }
                         });
                       },
-                    // rehypeCodeTitles,
-                    // rehypePrism,
                     [rehypeAutolinkHeadings, {
-                        // behavior: 'wrap',
-                        // content: link,
                         test: ['h1', 'h2', 'h3'],
                         properties: {class: 'linked-article-header'}
                     }],
-                    // withToc,
-                    // [withTocExport, {name: 'tableOfContents'}]
                     [toc, {
                         headings: ['h1', 'h2', 'h3'],
                         cssClasses: {
                             toc: 'page-outline',
                             link: 'page-link',
                         },
-                        customizeTOC: (tree: any) => {
-                            // console.log(tree.children[0].children[0].getBoundingClientRect());
-                            // console.log(document.querySelector('nav'))
-                            // console.log('-------------');
-                            return tree;
-                        },
-                        customizeTOCItem: (tree: any, heading: any) => {
-                            // console.log(tree);
-                            // console.log(heading);
-                            // console.log('-------------');
-                        }
                     }]
                 ]
             }
@@ -155,6 +129,9 @@ export async function getPostsMeta(): Promise<Meta[] | undefined>{
             Accept: 'application/vnd.github+json',
             Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
             'X-GitHub-Api-Version': '2022-11-28',
+        },
+        next: {
+            revalidate: 60
         }
     })
 

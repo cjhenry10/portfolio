@@ -9,9 +9,6 @@ export default function RootLayout({
 }) {
   return (
     <>
-    {/* <Button variant='contained' color='var(--c3)' onClick={()=>{}}>
-        Home
-      </Button> */}
       <div className={styles.container}>
       <Link href="/" style={{padding: '1rem', display: 'flex', alignItems: 'center'}}><FiArrowLeftCircle style={{verticalAlign: '-10%', marginRight: '0.5rem'}} />Home</Link>
       {children}

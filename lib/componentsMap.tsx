@@ -11,7 +11,6 @@ import Toc from "@/components/mdComponents/Toc";
 import Code from "@/components/mdComponents/Code";
 const components = {
   pre: Pre,
-  // code: ({children}: {children: any}) => <CodeInline>{children}</CodeInline>,
   h1: H1,
   h2: H2,
   h3: H3,

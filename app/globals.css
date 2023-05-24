@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import '../themes/nord.css'; */
 @import '../themes/codeblock.css';
 
 :root {
