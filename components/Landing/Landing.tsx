@@ -34,7 +34,7 @@ const Landing = () => {
       setZ(0);
       setTop(window.innerHeight / 3);
       setLeft(window.innerWidth / 2);
-      setFont(`clamp(2rem, 8vw, 8rem)`);
+      setFont(`clamp(2rem, 6vw, 6rem)`);
       setOpacity(1);
       // setColor(`var(--dark3)`);
     }
