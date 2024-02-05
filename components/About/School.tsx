@@ -33,9 +33,8 @@ const School = () => {
       <div>
         <h3 className='py-2 text-xl'>Arizona State University</h3>
         <h2 className='py-2 text-2xl'>Information Technology, M.S.</h2>
-        <h4 className='py-2 text-lg'>Information Systems — 4.0 GPA</h4>
+        <h4 className='py-2 text-lg'>Information Systems — With Distinction</h4>
         <h5 className='py-2 text-lg'>December 2022 - December 2023</h5>
-        <Progress />
       </div>
     </div>
   );
